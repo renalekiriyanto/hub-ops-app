@@ -10,7 +10,9 @@
             </button>
             <div>
                 <h1 style="font-size:16px;font-weight:800">Dashboard</h1>
-                <p class="mono" style="font-size:9px;color:var(--muted)">Jumat, 20 Februari 2026</p>
+                <p class="mono" style="font-size:9px;">
+                    {{ \Carbon\Carbon::now()->isoFormat('dddd, DD MMM YYYY') }}
+                </p>
             </div>
         </div>
 

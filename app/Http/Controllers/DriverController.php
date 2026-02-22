@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ImportExcelRequest;
 use Illuminate\Http\Request;
 
 class DriverController extends Controller
@@ -11,7 +12,7 @@ class DriverController extends Controller
      */
     public function index()
     {
-        //
+        return view("driver.index");
     }
 
     /**
@@ -60,5 +61,13 @@ class DriverController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    // Additional action
+    public function import(ImportExcelRequest $request)
+    {
+        // Handle file upload and import logic here
+        return $request->all();
+        return response()->json(['message' => 'Import functionality not implemented yet.']);
     }
 }
