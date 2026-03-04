@@ -8,5 +8,7 @@ Route::get('', [DashboardController::class,'index'])->name('dashboard');
 
 Route::prefix('driver')->group(function () {
     Route::get('', [DriverController::class,'index'])->name('driver.index');
+    Route::get('fleet-overview', [DriverController::class,'fleetOverview'])->name('driver.fleet-overview');
+
     Route::post('import', [DriverController::class,'import'])->name('driver.import');
 });

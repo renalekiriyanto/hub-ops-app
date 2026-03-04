@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('drivers', function (Blueprint $table) {
             $table->unsignedBigInteger('driver_id')->primary();
             $table->string('name');
-            $table->string('phone_number')->unique();
+            $table->string('phone_number')->unique()->nullable();
             $table->enum('vehicle_type', ['4wh', '2wh'])->default('2wh');
             $table->enum('contract_type', ['dedicated', 'plus', 'mitra'])->default('dedicated');
             $table->enum('status', ['normal', 'suspended', 'terminated'])->default('normal');

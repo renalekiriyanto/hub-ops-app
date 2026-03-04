@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ImportExcelRequest;
+use App\Services\DriverService;
 use Illuminate\Http\Request;
 
 class DriverController extends Controller
@@ -10,9 +11,16 @@ class DriverController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    protected $driverService;
+    public function __construct(DriverService $driverService)
     {
-        return view("driver.index");
+        $this->driverService = $driverService;
+    }
+
+    public function index(Request $request)
+    {
+        $drivers = $this->driverService->fetchDrivers($request->all());
+        return view("driver.index", compact('drivers'));
     }
 
     /**
@@ -63,11 +71,19 @@ class DriverController extends Controller
         //
     }
 
+    public function fleetOverview(Request $request)
+    {
+        $data = $this->driverService->fleetOverview();
+        return $data;
+        $data = null;
+        return view("driver.fleet-overview", compact('data'));
+    }
+
     // Additional action
     public function import(ImportExcelRequest $request)
     {
         // Handle file upload and import logic here
-        return $request->all();
-        return response()->json(['message' => 'Import functionality not implemented yet.']);
+        $result = $this->driverService->importExcel($request->file('file_import'));
+        return $result;
     }
 }

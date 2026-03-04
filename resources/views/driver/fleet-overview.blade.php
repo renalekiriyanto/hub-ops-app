@@ -1,29 +1,16 @@
 @extends('layouts.main')
 @section('title', 'Driver')
 @section('content')
-    <div class="main-panel">
+    <div class="main-panel" x-data="driverPage()">
         <div class="content-wrapper">
             <div class="row">
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Data Driver</h4>
+                            <h4 class="card-title">Fleet Overview</h4>
                             <p class="card-description">
-                                List data driver yang terdaftar di aplikasi Hub Ops. Data driver digunakan untuk mengelola
-                                informasi.
+                                List rider/driver assignment task, and for monitoring them.
                             </p>
-                            <div class="dropdown">
-                                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton5"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Excel </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
-                                    <a class="dropdown-item" href="#">Export Data</a>
-                                    <div class="dropdown-divider"></div>
-                                    <button class="dropdown-item" type="button" data-bs-toggle="modal"
-                                        data-bs-target="#importModal">
-                                        Import Data
-                                    </button>
-                                </div>
-                            </div>
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -35,15 +22,32 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($drivers as $driver)
+                                    <template x-if="loading">
                                         <tr>
-                                            <td>{{ $driver->driver_id }}</td>
-                                            <td>{{ $driver->name }}</td>
-                                            <td>{{ $driver->vehicle_type }}</td>
-                                            <td>{{ $driver->contract_type }}</td>
-                                            <td><label class="badge badge-success">Active</label></td>
+                                            <td colspan="5" class="text-center">Loading...</td>
                                         </tr>
-                                    @endforeach
+                                    </template>
+
+                                    <template x-for="driver in drivers" :key="driver.driver_id">
+                                        <tr>
+                                            <td x-text="driver.driver_id"></td>
+                                            <td x-text="driver.name"></td>
+                                            <td x-text="driver.vehicle_type"></td>
+                                            <td x-text="driver.contract_type"></td>
+                                            <td>
+                                                <span class="badge"
+                                                    :class="driver.status == 1 ? 'bg-success' : 'bg-danger'"
+                                                    x-text="driver.status == 1 ? 'Active' : 'Inactive'">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </template>
+
+                                    <template x-if="!loading && drivers.length === 0">
+                                        <tr>
+                                            <td colspan="5" class="text-center">Data kosong</td>
+                                        </tr>
+                                    </template>
                                 </tbody>
                             </table>
                         </div>
@@ -101,4 +105,5 @@
         </footer>
         <!-- partial -->
     </div>
+    <script src="{{ asset('assets/js/fleet-overview/index.js') }}"></script>
 @endsection
