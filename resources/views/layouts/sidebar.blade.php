@@ -25,96 +25,21 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
+                <li class="nav-header">STAFF</li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon bi bi-box-seam-fill"></i>
+                        <i class="nav-icon bi bi-people-fill"></i>
                         <p>
-                            Widgets
+                            Staff
                             <i class="nav-arrow bi bi-chevron-right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./widgets/small-box.html" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Small Box</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./widgets/info-box.html" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>info Box</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./widgets/cards.html" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Cards</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="nav-header">EXAMPLES</li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon bi bi-box-arrow-in-right"></i>
-                        <p>
-                            Auth
-                            <i class="nav-arrow bi bi-chevron-right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                            <a href="{{route('staff.index')}}" class="nav-link">
                                 <p>
-                                    Version 1
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
+                                    List Data
                                 </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="./examples/login.html" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Login</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./examples/register.html" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Register</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-box-arrow-in-right"></i>
-                                <p>
-                                    Version 2
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="./examples/login-v2.html" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Login</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./examples/register-v2.html" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Register</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./examples/lockscreen.html" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Lockscreen</p>
                             </a>
                         </li>
                     </ul>
@@ -122,68 +47,22 @@
 
                 <li class="nav-header">DOCUMENTS</li>
                 <li class="nav-item">
-                    <a href="./docs/introduction.html" class="nav-link">
-                        <i class="nav-icon bi bi-download"></i>
-                        <p>Installation</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./docs/layout.html" class="nav-link">
-                        <i class="nav-icon bi bi-grip-horizontal"></i>
-                        <p>Layout</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./docs/color-mode.html" class="nav-link">
-                        <i class="nav-icon bi bi-star-half"></i>
-                        <p>Color Mode</p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon bi bi-ui-checks-grid"></i>
+                        <i class="nav-icon bi bi-file-earmark"></i>
                         <p>
-                            Components
+                            Manage Documents
                             <i class="nav-arrow bi bi-chevron-right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./docs/components/main-header.html" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Main Header</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./docs/components/main-sidebar.html" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Main Sidebar</p>
+                            <a href="{{route('leave-application-letter.index')}}" class="nav-link">
+                                <p>
+                                    Leave Application Letter
+                                </p>
                             </a>
                         </li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon bi bi-filetype-js"></i>
-                        <p>
-                            Javascript
-                            <i class="nav-arrow bi bi-chevron-right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="./docs/javascript/treeview.html" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Treeview</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="./docs/browser-support.html" class="nav-link">
-                        <i class="nav-icon bi bi-browser-edge"></i>
-                        <p>Browser Support</p>
-                    </a>
                 </li>
                 <li class="nav-item">
                     <a href="./docs/how-to-contribute.html" class="nav-link">

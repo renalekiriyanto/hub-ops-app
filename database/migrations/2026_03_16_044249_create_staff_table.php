@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('drivers', function (Blueprint $table) {
-            $table->unsignedBigInteger('driver_id')->primary();
+        Schema::create('staff', function (Blueprint $table) {
+            $table->string('id_staff')->primary();
             $table->string('name');
             $table->string('phone_number')->unique()->nullable();
-            $table->enum('vehicle_type', ['4wh', '2wh'])->default('2wh');
-            $table->enum('contract_type', ['dedicated', 'plus', 'mitra'])->default('dedicated');
+            $table->enum('vehicle_type', ['4wh', '2wh'])->nullable();
+            $table->enum('title', ['HL', 'SL', 'Admin', 'Operator', 'Driver', 'Rider'])->nullable();
+            $table->enum('contract_type', ['dedicated', 'plus', 'mitra'])->nullable();
             $table->enum('status', ['normal', 'suspended', 'terminated'])->default('normal');
             $table->timestamps();
-            $table->softDeletes();
-        });
+        }); 
     }
 
     /**
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('drivers');
+        Schema::dropIfExists('staff');
     }
 };

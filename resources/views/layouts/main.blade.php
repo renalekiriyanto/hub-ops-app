@@ -75,8 +75,8 @@
                 <div class="container-fluid">
                     <!--begin::Row-->
                     <div class="row">
-                        <div class="col-sm-6">
-                            <h3 class="mb-0">Dashboard</h3>
+                        <div class="col">
+                            <h3 class="mb-0">@yield('title')</h3>
                         </div>
                     </div>
                     <!--end::Row-->
@@ -87,15 +87,7 @@
             <!--begin::App Content-->
             <div class="app-content">
                 <!--begin::Container-->
-                <div class="container-fluid">
-                    <!--begin::Row-->
-                    <!--end::Row-->
-                    <!--begin::Row-->
-                    <div class="row">
-
-                    </div>
-                    <!-- /.row (main row) -->
-                </div>
+                @yield('content')
                 <!--end::Container-->
             </div>
             <!--end::App Content-->
