@@ -45,6 +45,65 @@
                     </ul>
                 </li>
 
+                <li class="nav-header">MONITORING</li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon bi bi-people-fill"></i>
+                        <p>
+                            Inbound
+                            <i class="nav-arrow bi bi-chevron-right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('staff.index')}}" class="nav-link">
+                                <p>
+                                    Monitoring Inbound
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('staff.index')}}" class="nav-link">
+                                <p>
+                                    Monitoring STD/Someday
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon bi bi-people-fill"></i>
+                        <p>
+                            Performance Courier
+                            <i class="nav-arrow bi bi-chevron-right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('staff.index')}}" class="nav-link">
+                                <p>
+                                    ADO Target Productivity
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('staff.index')}}" class="nav-link">
+                                <p>
+                                    Performance Monitoring
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('staff.index')}}" class="nav-link">
+                                <p>
+                                    Pinalty Courier
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li class="nav-header">DOCUMENTS</li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
