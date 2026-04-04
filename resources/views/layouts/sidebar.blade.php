@@ -56,7 +56,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('staff.index')}}" class="nav-link">
+                            <a href="{{route('monitoring.inbound.index')}}" class="nav-link">
                                 <p>
                                     Monitoring Inbound
                                 </p>

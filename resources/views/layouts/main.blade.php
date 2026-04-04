@@ -100,6 +100,7 @@
     <!--end::App Wrapper-->
     <!--begin::Script-->
     @include('layouts.scripts')
+    @stack('scripts')
     <!--end::Script-->
 </body>
 <!--end::Body-->
